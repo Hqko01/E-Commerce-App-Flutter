@@ -1,0 +1,106 @@
+{
+    "shirt": [
+        {
+            "image": "./assets/images/cotton-shirt.png",
+            "name": "Cotton Shirt",
+            "comment": "Very Good Cotton Shirt",
+            "star": "4.7",
+            "price": "$18",
+            "type": "popular"
+        },
+        {
+            "image": "./assets/images/casual-shirt.png",
+            "name": "Casual Shirt",
+            "comment": "Very Good Casual Shirt",
+            "star": "4.1",
+            "price": "$15",
+            "type": "popular"
+        },
+        {
+            "image": "./assets/images/casual-shirt-2.png",
+            "name": "Casual Shirt",
+            "comment": "Very Good Casual Shirt",
+            "star": "3.8",
+            "price": "$13",
+            "type": "notPopular"
+        }
+    ],
+    "pants": [
+        {
+            "image": "./assets/images/cotton-pant.png",
+            "name": "Cotton Pant",
+            "comment": "Very Good Cotton Pant",
+            "star": "4.8",
+            "price": "$25",
+            "type": "popular"
+        },
+        {
+            "image": "./assets/images/skiny-jeans.png",
+            "name": "Skiny Jeans",
+            "comment": "Very Good Skiny Jeans",
+            "star": "4.2",
+            "price": "$25",
+            "type": "popular"
+        }
+    ],
+    "shos": [
+        {
+            "image": "./assets/images/nike-blazer-mid.png",
+            "name": "Nike Blazer",
+            "comment": "Very Good Shos",
+            "star": "5",
+            "price": "$100",
+            "type": "popular"
+        },
+        {
+            "image": "./assets/images/adidas-captir-3.0.png",
+            "name": "Adidas K3",
+            "comment": "Very Good Shos",
+            "star": "4.4",
+            "price": "$54",
+            "type": "popular"
+        },
+        {
+            "image": "./assets/images/adidas-captir-2.0.png",
+            "name": "Adidas K2",
+            "comment": "Very Good Shos",
+            "star": "3.8",
+            "price": "$71",
+            "type": "popular"
+        },
+        {
+            "image": "./assets/images/adidas-daily-3.0.png",
+            "name": "Adidas Daily",
+            "comment": "Very Good Shos",
+            "star": "3.6",
+            "price": "$38",
+            "type": "notPopular"
+        }
+    ],
+    "dress": [
+        {
+            "image": "./assets/images/BTFBM-summer-Dress.jpg",
+            "name": "BTFBM Dress",
+            "comment": "Very Good Dress",
+            "star": "4.8",
+            "price": "$47",
+            "type": "popular"
+        },
+        {
+            "image": "./assets/images/BellePoque-summer-dress.jpg",
+            "name": "BP Dress",
+            "comment": "Very Good Dress",
+            "star": "4.4",
+            "price": "$33",
+            "type": "popular"
+        },
+        {
+            "image": "./assets/images/BellePoque-vintage-summer-dress.jpg",
+            "name": "BP Vintage Dress",
+            "comment": "Very Good Dress",
+            "star": "3.8",
+            "price": "$43",
+            "type": "notPopular"
+        }
+    ]
+}
