@@ -1,4 +1,4 @@
-# Vize APP
+# Final APP
 
 ## Goal Project Images
 
