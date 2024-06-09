@@ -1,3 +1,3 @@
-# vize_app
+# Final App
 
-A new Flutter project.
+Vize app updated to final app
