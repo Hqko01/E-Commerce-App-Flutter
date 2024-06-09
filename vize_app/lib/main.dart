@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
-
 import 'bloc/client/client_cubit.dart';
 import 'core/routes.dart';
 import 'core/themes.dart';
