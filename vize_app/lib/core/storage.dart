@@ -7,10 +7,9 @@ class Storage {
     final SharedPreferences storage = await SharedPreferences.getInstance();
 
     final runned = storage.getBool("runned");
-
     var counter = storage.getInt("launchCount");
 
-    if (runned == null) {
+    if (counter == null) {
       counter = 1;
       await storage.setInt("launchCount", 1);
       return true;
@@ -31,7 +30,6 @@ class Storage {
     if (language != null) {
       await storage.setString("language", language);
     }
-
     if (darkMode != null) {
       await storage.setBool("darkMode", darkMode);
     }

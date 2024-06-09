@@ -4,11 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:image_picker/image_picker.dart';
+import 'package:vize_app/bloc/client/utils.dart';
 
 import '../bloc/cart/cart_page.dart';
 import '../bloc/cart/fav_page.dart';
 import '../bloc/client/client_cubit.dart';
 import '../bloc/products/product_detail.dart';
+import '../bloc/client/utils.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -23,6 +26,15 @@ List<String> genderOptions = ['Male', 'Female'];
 List _items = [];
 
 class _HomeScreenState extends State<HomeScreen> {
+  Uint8List? _image;
+
+  void selectImage() async {
+    Uint8List img = await pickImage(ImageSource.gallery);
+    setState(() {
+      _image = img;
+    });
+  }
+
   late ClientCubit clientCubit;
 
   void initState() {
@@ -1171,21 +1183,44 @@ class _HomeScreenState extends State<HomeScreen> {
           children: [
             Expanded(
               flex: 2,
-              child: Center(
-                child: Container(
-                  width: 140,
-                  height: 140,
-                  decoration: const BoxDecoration(
-                    borderRadius: BorderRadius.all(
-                      Radius.circular(20),
+              child: _image != null
+                  ? ElevatedButton(
+                      onPressed: selectImage,
+                      child: Center(
+                        child: Container(
+                          width: 140,
+                          height: 140,
+                          decoration: BoxDecoration(
+                            borderRadius: const BorderRadius.all(
+                              Radius.circular(20),
+                            ),
+                            image: DecorationImage(
+                              image: MemoryImage(_image!),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                      ),
+                    )
+                  : ElevatedButton(
+                      onPressed: selectImage,
+                      child: Center(
+                        child: Container(
+                          width: 140,
+                          height: 140,
+                          decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(20),
+                            ),
+                            image: DecorationImage(
+                              image: AssetImage(
+                                  './assets/images/profile-photo.jpg'),
+                              fit: BoxFit.cover,
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                    image: DecorationImage(
-                      image: AssetImage('./assets/images/profile-photo.jpg'),
-                      fit: BoxFit.cover,
-                    ),
-                  ),
-                ),
-              ),
             ),
             Expanded(
               flex: 5,
