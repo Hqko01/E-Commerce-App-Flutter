@@ -1,6 +1,4 @@
 import 'package:shared_preferences/shared_preferences.dart';
-/* 
-import '../models/payment_card.dart'; */
 
 class Storage {
   Future<bool> isFirstLaunch() async {
