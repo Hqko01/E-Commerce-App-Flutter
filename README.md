@@ -1,4 +1,5 @@
-# Final APP
+# E-Commerce App
+This project is my final exam project.
 
 ## Goal Project Images
 
